@@ -14,6 +14,7 @@ import {
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -47,8 +48,10 @@ export function ForgotPasswordForm() {
   return (
     <Card className="mx-auto w-full bg-card/95 ring-border/40">
       <CardHeader className="space-y-2">
-        <CardTitle>Yêu cầu khôi phục</CardTitle>
-        <CardDescription>Nhập email để nhận liên kết khôi phục.</CardDescription>
+        <CardTitle>Khôi phục quyền truy cập</CardTitle>
+        <CardDescription>
+          Nhập email để nhận mã xác thực và tiếp tục vào trung tâm vé.
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <Form {...form}>
@@ -62,11 +65,14 @@ export function ForgotPasswordForm() {
                   <FormControl>
                     <Input
                       autoComplete="email"
-                      placeholder="ban@chinapass.vn"
+                      placeholder="khach@bacnamrail.vn"
                       type="email"
                       {...field}
                     />
                   </FormControl>
+                  <FormDescription>
+                    Hệ thống sẽ gửi liên kết và mã đặt lại mật khẩu về email này.
+                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -81,7 +87,7 @@ export function ForgotPasswordForm() {
               {form.formState.isSubmitting ? (
                 <>
                   <Spinner className="size-4 text-current" />
-                  Đang gửi yêu cầu...
+                  Đang gửi mã khôi phục...
                 </>
               ) : (
                 "Gửi liên kết"

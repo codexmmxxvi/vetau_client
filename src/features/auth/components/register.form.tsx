@@ -14,6 +14,7 @@ import {
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -60,8 +61,10 @@ export function RegisterForm() {
   return (
     <Card size="sm" className="mx-auto w-full bg-card/95 ring-border/40">
       <CardHeader className="space-y-1.5">
-        <CardTitle>Tạo tài khoản</CardTitle>
-        <CardDescription>Tạo tài khoản để bắt đầu đặt vé.</CardDescription>
+        <CardTitle>Tạo hồ sơ hành khách</CardTitle>
+        <CardDescription>
+          Lưu thông tin để đặt vé nhanh hơn ở các tuyến Bắc Trung Nam.
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <Form {...form}>
@@ -75,6 +78,9 @@ export function RegisterForm() {
                   <FormControl>
                     <Input autoComplete="name" placeholder="Nguyễn Văn A" {...field} />
                   </FormControl>
+                  <FormDescription>
+                    Dùng để hiển thị trên vé điện tử và hồ sơ.
+                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -88,11 +94,14 @@ export function RegisterForm() {
                   <FormControl>
                     <Input
                       autoComplete="email"
-                      placeholder="ban@chinapass.vn"
+                      placeholder="khach@bacnamrail.vn"
                       type="email"
                       {...field}
                     />
                   </FormControl>
+                  <FormDescription>
+                    Email nhận mã vé, cập nhật giờ tàu và thông báo đổi chỗ.
+                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -111,6 +120,9 @@ export function RegisterForm() {
                       {...field}
                     />
                   </FormControl>
+                  <FormDescription>
+                    Nên dùng tối thiểu 8 ký tự để bảo vệ lịch sử booking.
+                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -129,6 +141,9 @@ export function RegisterForm() {
                       {...field}
                     />
                   </FormControl>
+                  <FormDescription>
+                    Xác nhận lại để hoàn tất tạo hồ sơ.
+                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -143,7 +158,7 @@ export function RegisterForm() {
               {form.formState.isSubmitting ? (
                 <>
                   <Spinner className="size-4 text-current" />
-                  Đang tạo tài khoản...
+                  Đang tạo hồ sơ...
                 </>
               ) : (
                 "Tạo tài khoản"

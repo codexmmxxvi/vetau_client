@@ -9,8 +9,8 @@ export default function LoginPage() {
   return (
     <AuthShell
       eyebrow="Tài khoản / Đăng nhập"
-      title="Đăng nhập để quản lý vé đã đặt"
-      description="Xem lịch khởi hành, giữ chỗ và thông tin hành khách."
+      title="Đăng nhập để quản lý vé tàu đã đặt"
+      description="Xem lịch tàu, toa ghế, giữ chỗ và thông tin hành khách."
       footer={
         <>
           Chưa có tài khoản?{" "}

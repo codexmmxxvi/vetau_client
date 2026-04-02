@@ -14,6 +14,7 @@ import {
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -58,8 +59,10 @@ export function ResetPasswordForm() {
   return (
     <Card className="mx-auto w-full bg-card/95 ring-border/40">
       <CardHeader className="space-y-2">
-        <CardTitle>Đặt lại mật khẩu</CardTitle>
-        <CardDescription>Nhập mã và mật khẩu mới.</CardDescription>
+        <CardTitle>Đặt mật khẩu mới</CardTitle>
+        <CardDescription>
+          Xác thực mã khôi phục để tiếp tục quản lý các booking đã lưu.
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <Form {...form}>
@@ -77,6 +80,9 @@ export function ResetPasswordForm() {
                       {...field}
                     />
                   </FormControl>
+                  <FormDescription>
+                    Mã được gửi tới email đã dùng để đăng ký tài khoản.
+                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -95,6 +101,9 @@ export function ResetPasswordForm() {
                       {...field}
                     />
                   </FormControl>
+                  <FormDescription>
+                    Mật khẩu mới sẽ áp dụng cho toàn bộ khu quản lý vé.
+                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -113,6 +122,9 @@ export function ResetPasswordForm() {
                       {...field}
                     />
                   </FormControl>
+                  <FormDescription>
+                    Nhập lại để xác nhận chính xác trước khi cập nhật.
+                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -127,7 +139,7 @@ export function ResetPasswordForm() {
               {form.formState.isSubmitting ? (
                 <>
                   <Spinner className="size-4 text-current" />
-                  Đang cập nhật...
+                  Đang cập nhật mật khẩu...
                 </>
               ) : (
                 "Cập nhật mật khẩu"

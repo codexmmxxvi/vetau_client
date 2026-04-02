@@ -10,7 +10,7 @@ export default function ResetPasswordPage() {
     <AuthShell
       eyebrow="Tài khoản / Đặt lại mật khẩu"
       title="Tạo mật khẩu mới"
-      description="Xác thực mã khôi phục và cập nhật mật khẩu."
+      description="Xác thực mã khôi phục để quay lại trung tâm quản lý vé."
       footer={
         <>
           Chưa nhận được mã?{" "}

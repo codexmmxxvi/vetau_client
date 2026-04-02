@@ -9,8 +9,8 @@ export default function RegisterPage() {
   return (
     <AuthShell
       eyebrow="Tài khoản / Đăng ký"
-      title="Tạo tài khoản mới"
-      description="Lưu thông tin và quản lý đơn đặt vé dễ hơn."
+      title="Tạo tài khoản hành khách mới"
+      description="Lưu thông tin liên hệ, hành khách thường đi và ưu tiên loại khoang."
       footer={
         <>
           Đã có tài khoản?{" "}

@@ -10,7 +10,7 @@ export default function ForgotPasswordPage() {
     <AuthShell
       eyebrow="Tài khoản / Khôi phục"
       title="Lấy lại quyền truy cập tài khoản"
-      description="Nhập email đã đăng ký để đặt lại mật khẩu."
+      description="Nhập email đã đăng ký để tiếp tục quản lý vé và lịch tàu."
       footer={
         <>
           Đã nhớ mật khẩu?{" "}

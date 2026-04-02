@@ -14,6 +14,7 @@ import {
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -49,8 +50,10 @@ export function LoginForm() {
   return (
     <Card size="sm" className="mx-auto w-full bg-card/95 ring-border/40">
       <CardHeader className="space-y-1.5">
-        <CardTitle>Đăng nhập</CardTitle>
-        <CardDescription>Nhập email và mật khẩu để tiếp tục.</CardDescription>
+        <CardTitle>Đăng nhập trung tâm vé</CardTitle>
+        <CardDescription>
+          Vào khu theo dõi booking, toa tàu và mã vé điện tử.
+        </CardDescription>
       </CardHeader>
       <CardContent>
         <Form {...form}>
@@ -64,11 +67,14 @@ export function LoginForm() {
                   <FormControl>
                     <Input
                       autoComplete="email"
-                      placeholder="ban@chinapass.vn"
+                      placeholder="khach@bacnamrail.vn"
                       type="email"
                       {...field}
                     />
                   </FormControl>
+                  <FormDescription>
+                    Email này sẽ nhận xác nhận vé và thay đổi giờ tàu.
+                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -87,6 +93,9 @@ export function LoginForm() {
                       {...field}
                     />
                   </FormControl>
+                  <FormDescription>
+                    Tài khoản demo sẽ điều hướng tới khu quản lý vé của tôi.
+                  </FormDescription>
                   <FormMessage />
                 </FormItem>
               )}
@@ -101,7 +110,7 @@ export function LoginForm() {
               {form.formState.isSubmitting ? (
                 <>
                   <Spinner className="size-4 text-current" />
-                  Đang đăng nhập...
+                  Đang mở khoang vé...
                 </>
               ) : (
                 "Đăng nhập"

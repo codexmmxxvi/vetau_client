@@ -25,10 +25,10 @@ export function RootLayout() {
                   variant="secondary"
                   className="px-3 py-1 text-[11px] font-semibold tracking-[0.18em] uppercase"
                 >
-                  Loading
+                  Đang chuyển tuyến
                 </Badge>
                 <p className="text-sm text-muted-foreground">
-                  The interface is preparing the next screen.
+                  Hệ thống đang chuẩn bị màn hình tiếp theo.
                 </p>
               </div>
             </CardContent>
